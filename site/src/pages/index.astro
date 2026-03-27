@@ -40,122 +40,47 @@ const highlightStats = [
 	description="KingTech shares practical tech knowledge through videos, blogs and hands-on project stories."
 >
 	<SiteHeader />
+
 	<div class="page-shell">
 
+
 		<main>
-			<section class="hero">
-				<div class="hero-copy">
-					<p class="eyebrow">Tech stories, builds and practical guides</p>
-					<h1>Exploring hardware, software and creative engineering.</h1>
-					<p class="hero-text">
-						KingTech is a modern technical platform focused on learning by building. From PC
-						projects and electronics to software experiments and tutorials, the goal is to make
-						complex technology approachable and inspiring.
-					</p>
-
-					<div class="hero-actions">
-						<a class="primary-button" href="/blogs">Explore articles</a>
-						<a class="secondary-button" href="https://www.youtube.com/@KingTechNL"
-							>Visit YouTube</a
-						>
-					</div>
-
-					<ul class="stats-list">
-						{highlightStats.map((stat) => (
-							<li>
-								<strong>{stat.value}</strong>
-								<span>{stat.label}</span>
-							</li>
-						))}
-					</ul>
-				</div>
-
-				<div class="hero-panel">
-					<div class="panel-glow"></div>
-					<div class="panel-card panel-card-large">
-						<span class="panel-kicker">Featured focus</span>
-						<h2>Build. Test. Explain.</h2>
-						<p>
-							A clean, editorial landing page inspired by the current KingTech site, with a darker
-							premium look, bold call-to-actions and clear content sections.
-						</p>
-					</div>
-					<div class="panel-grid">
-						<div class="panel-card small accent-red">
-							<span>Hardware</span>
-							<p>PCs, upgrades, devices and workshop builds.</p>
-						</div>
-						<div class="panel-card small accent-blue">
-							<span>Software</span>
-							<p>Apps, integrations, tools and development guides.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
+			
 			<section class="intro-block">
 				<div>
 					<p class="section-label">What KingTech is about</p>
 					<h2>Technology is better when it is explained clearly and shared openly.</h2>
 				</div>
 				<p>
-					The site is structured around discovery, practical knowledge and experimentation. The
-					visual design uses a dark base, subtle gradients, strong typography and modular content
-					cards to reflect a polished, tech-focused brand.
+					Technology plays a role in almost every aspect of our daily lives and in every organization
+					anywhere in the world. At KingTech, we like discovering the latest and greatest when it comes
+					to these technologies. Our projects explore a wide reach of subjects. Whether it is 3D printing,
+					industrial electronics, software or customized PC's. KingTech has seen it all. We not only have
+					a deep understanding of technology, but firmly believe in spreading that knowledge. Via blogs
+					and video's we take our audience on a journey through the latest developments and encourage
+					people to experiment and discover. The KingTech philosophy is to enable the tech community with
+					the knowledge and tools to develop wonderful projects.
 				</p>
 			</section>
 
-			<section class="feature-section">
-				<div class="section-heading">
-					<p class="section-label">Core sections</p>
-					<h2>Designed for content, community and hands-on learning.</h2>
-				</div>
-
-				<div class="feature-grid">
-					{featureCards.map((card) => (
-						<article class="feature-card">
-							<div class="feature-icon" aria-hidden="true">●</div>
-							<h3>{card.title}</h3>
-							<p>{card.description}</p>
-							<a href={card.href}>{card.cta}</a>
-						</article>
-					))}
-				</div>
-			</section>
-
-			<section class="showcase-grid">
-				<article class="showcase-card showcase-primary">
-					<p class="section-label">Content style</p>
-					<h2>Balanced between visual storytelling and technical depth.</h2>
-					<p>
-						Use this space for featured projects, recent launches or a curated content stream that
-						pulls users deeper into the platform.
-					</p>
+			<div class="media-card-grid">
+				<article class="media-card">
+					<img src="/videocreation.png" alt="KingTech YouTube" />
+					<div class="media-card-body">
+						<p>On our Youtube channel you can find our latest projects and tech reviews. Interested in building a PC? Server? or upgrading an old XBox? We show you how its done!</p>
+						<a class="primary-button" href="/videos">Videos</a>
+					</div>
 				</article>
 
-				<article class="showcase-card">
-					<h3>Videos</h3>
-					<p>Prominent visual entry point for project showcases and quick explanations.</p>
+				<article class="media-card">
+					<img src="/blogging.jpg" alt="KingTech Blogs" />
+					<div class="media-card-body">
+						<p>With over a decade of experience with tech, KingTech explores the latest and greatest in both hardware and software. In our blogs we show you what we are working on and provide you with the necessary instructions to do things yourself.</p>
+						<a class="primary-button" href="/blogs">Blogs</a>
+					</div>
 				</article>
+			</div>
 
-				<article class="showcase-card">
-					<h3>Blogs</h3>
-					<p>Detailed written follow-up content for users who want a deeper technical breakdown.</p>
-				</article>
-
-				<article class="showcase-card">
-					<h3>Community value</h3>
-					<p>Strong messaging around learning, experimenting and building things yourself.</p>
-				</article>
-			</section>
-
-			<section class="cta-banner" id="contact">
-				<div>
-					<p class="section-label">Get in touch</p>
-					<h2>Want to collaborate, share an idea or follow along with new projects?</h2>
-				</div>
-				<a class="primary-button" href="mailto:info@example.nl">Contact KingTech</a>
-			</section>
 		</main>
 
 		<SiteFooter />

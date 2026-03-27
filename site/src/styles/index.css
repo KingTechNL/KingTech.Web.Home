@@ -40,6 +40,56 @@ a {
 	padding: 24px;
 }
 
+.page-intro-card {
+	padding: 32px 48px;
+	margin-bottom: 20px;
+}
+
+.media-card-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.media-card {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background: #ffffff;
+	color: #1a1f2e;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.media-card img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	display: block;
+}
+
+.media-card-body {
+	padding: 28px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.media-card-body p {
+	margin: 0 0 20px;
+	color: #4b5563;
+	line-height: 1.75;
+	text-align: center;
+	flex: 1;
+}
+
+.media-card-body .primary-button {
+	border-radius: 0;
+	align-self: center;
+	margin-top: auto;
+}
+
 .site-footer,
 .hero,
 .intro-block,
@@ -51,11 +101,17 @@ a {
 }
 
 .site-footer,
-.intro-block,
 .cta-banner {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 24px;
+}
+
+.intro-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 	gap: 24px;
 }
 
@@ -112,6 +168,7 @@ a {
 .hero-copy,
 .hero-panel,
 .intro-block,
+.page-intro-card,
 .feature-card,
 .showcase-card,
 .cta-banner {
@@ -333,7 +390,8 @@ h2 {
 @media (max-width: 1080px) {
 	.hero,
 	.showcase-grid,
-	.feature-grid {
+	.feature-grid,
+	.media-card-grid {
 		grid-template-columns: 1fr;
 	}
 
@@ -361,6 +419,7 @@ h2 {
 	.hero-copy,
 	.hero-panel,
 	.intro-block,
+	.page-intro-card,
 	.feature-card,
 	.showcase-card,
 	.cta-banner {
