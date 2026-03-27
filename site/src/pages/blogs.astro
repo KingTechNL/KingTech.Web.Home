@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/index.css';
+
+const blogPosts = [
+	{
+		title: 'Building a Quiet Home Server in 2026',
+		excerpt:
+			'A practical walkthrough of hardware choices, airflow tuning, and software setup for a low-noise always-on server.',
+		category: 'Hardware',
+		published: 'Mar 2026',
+		href: '#'
+	},
+	{
+		title: 'A Simple Workflow for Dockerized Development',
+		excerpt:
+			'How to keep local development predictable with Docker Compose, shared environment variables, and repeatable scripts.',
+		category: 'Software',
+		published: 'Feb 2026',
+		href: '#'
+	},
+	{
+		title: 'ESP32 Sensors: Logging Data the Right Way',
+		excerpt:
+			'From wiring and power stability to data retention and dashboards, this post covers a reliable IoT logging setup.',
+		category: 'Maker',
+		published: 'Jan 2026',
+		href: '#'
+	}
+];
+---
+
+<Layout
+	title="KingTech | Blogs"
+	description="KingTech blog posts about hardware, software, and maker projects."
+>
+	<SiteHeader />
+	<div class="page-shell">
+		<main>
+			<section class="intro-block">
+				<div>
+					<p class="section-label">Blogs</p>
+					<h1>Technical write-ups, lessons learned, and build notes.</h1>
+				</div>
+				<p>
+					This is the blog hub for KingTech. New posts focus on practical engineering, clear
+					explanations, and real project outcomes.
+				</p>
+			</section>
+
+			<section class="feature-section">
+				<div class="section-heading">
+					<p class="section-label">Latest posts</p>
+					<h2>Fresh articles from the workshop and development desk.</h2>
+				</div>
+
+				<div class="feature-grid">
+					{blogPosts.map((post) => (
+						<article class="feature-card">
+							<p class="eyebrow">{post.category} · {post.published}</p>
+							<h3>{post.title}</h3>
+							<p>{post.excerpt}</p>
+							<a href={post.href}>Read article</a>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section class="cta-banner" id="contact">
+				<div>
+					<p class="section-label">Stay updated</p>
+					<h2>Want updates when new blogs are published?</h2>
+				</div>
+				<a class="primary-button" href="mailto:info@kingtech.nl">Contact KingTech</a>
+			</section>
+		</main>
+
+		<SiteFooter />
+	</div>
+</Layout>

@@ -1,0 +1,160 @@
+.site-header {
+	background: #ffffff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 -5px 0 var(--kingtech-green);
+	padding: 0 24px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.site-header-inner {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0;
+	height: 56px;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 24px;
+	position: relative;
+}
+
+.site-nav-toggle {
+	display: none;
+}
+
+.site-nav-button {
+	display: none;
+}
+
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0;
+	color: #1a1f2e;
+}
+
+.brand-logo {
+	display: block;
+	height: 34px;
+	width: auto;
+}
+
+.site-nav {
+	display: flex;
+	align-items: stretch;
+	gap: 4px;
+	color: #4b5563;
+}
+
+.site-nav a {
+	padding: 0 12px;
+	font-size: 15px;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	border-bottom: 5px solid transparent;
+	transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.site-nav a:hover {
+	color: #1a1f2e;
+	border-bottom-color: var(--kingtech-green);
+}
+
+.site-nav a.active {
+	color: #1a1f2e;
+	border-bottom-color: var(--kingtech-blue);
+}
+
+.nav-contact {
+	color: var(--primary);
+}
+
+.nav-contact:hover {
+	color: #ffffff;
+	border-bottom-color: var(--primary);
+}
+
+@media (max-width: 820px) {
+	.site-header {
+		padding: 0 18px;
+	}
+
+	.site-header-inner {
+		align-items: center;
+		height: 56px;
+	}
+
+	.brand-logo {
+		height: 30px;
+	}
+
+	.site-nav-button {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 5px;
+		width: 44px;
+		height: 44px;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		cursor: pointer;
+	}
+
+	.site-nav-button span {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background: #1a1f2e;
+		transition: transform 0.2s ease, opacity 0.2s ease;
+	}
+
+	.site-nav-toggle:checked + .site-nav-button span:nth-child(1) {
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	.site-nav-toggle:checked + .site-nav-button span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.site-nav-toggle:checked + .site-nav-button span:nth-child(3) {
+		transform: translateY(-7px) rotate(-45deg);
+	}
+
+	.site-nav {
+		display: none;
+		position: absolute;
+		top: 56px;
+		left: 0;
+		right: 0;
+		flex-direction: column;
+		gap: 0;
+		background: #ffffff;
+		box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+		border-bottom: 5px solid var(--kingtech-green);
+	}
+
+	.site-nav-toggle:checked ~ .site-nav {
+		display: flex;
+	}
+
+	.site-nav a {
+		height: 48px;
+		padding: 0 18px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+		margin: 0;
+	}
+
+	.site-nav a:hover {
+		border-bottom-color: rgba(0, 0, 0, 0.08);
+		background: #f7f9fc;
+	}
+
+	.site-nav a.active {
+		border-bottom-color: rgba(0, 0, 0, 0.08);
+		box-shadow: inset 4px 0 0 var(--kingtech-blue);
+		background: #f2f8ff;
+	}
+}

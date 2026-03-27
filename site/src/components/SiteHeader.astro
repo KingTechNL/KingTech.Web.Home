@@ -1,0 +1,40 @@
+---
+import '../styles/navbar.css';
+const { pathname } = Astro.url;
+---
+
+<header class="site-header">
+	<div class="site-header-inner">
+		<a class="brand" href="/">
+			<img class="brand-logo" src="/KingTech-logo.png" alt="KingTech" />
+		</a>
+
+		<input id="site-nav-toggle" class="site-nav-toggle" type="checkbox" />
+		<label class="site-nav-button" for="site-nav-toggle" aria-label="Toggle navigation">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+
+		<nav id="site-nav-menu" class="site-nav" aria-label="Main navigation">
+			<a href="/" class={pathname === '/' ? 'active' : ''}>Home</a>
+			<a href="/videos" class={pathname.startsWith('/videos') ? 'active' : ''}>Videos</a>
+			<a href="/blogs" class={pathname.startsWith('/blogs') ? 'active' : ''}>Blogs</a>
+			<a href="/aboutus" class={pathname.startsWith('/aboutus') ? 'active' : ''}>About us</a>
+			<a class="nav-contact" href="#contact">Contact</a>
+		</nav>
+	</div>
+</header>
+
+<script>
+	const navToggle = document.getElementById('site-nav-toggle');
+	const navMenu = document.getElementById('site-nav-menu');
+
+	if (navToggle instanceof HTMLInputElement && navMenu) {
+		navMenu.querySelectorAll('a').forEach((link) => {
+			link.addEventListener('click', () => {
+				navToggle.checked = false;
+			});
+		});
+	}
+</script>
