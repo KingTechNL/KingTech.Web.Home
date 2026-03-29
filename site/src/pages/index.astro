@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SiteHeader from '../components/SiteHeader.astro';
-import SiteFooter from '../components/SiteFooter.astro';
 import '../styles/index.css';
 
 const featureCards = [
@@ -39,14 +37,12 @@ const highlightStats = [
 	title="KingTech | Discover, Build, Share"
 	description="KingTech shares practical tech knowledge through videos, blogs and hands-on project stories."
 >
-	<SiteHeader />
-
 	<div class="page-shell">
 
 
 		<main>
 			
-			<section class="intro-block">
+			<section class="intro-block intro-accent-card">
 				<div>
 					<p class="section-label">What KingTech is about</p>
 					<h2>Technology is better when it is explained clearly and shared openly.</h2>
@@ -83,6 +79,5 @@ const highlightStats = [
 
 		</main>
 
-		<SiteFooter />
 	</div>
 </Layout>
