@@ -1,0 +1,64 @@
+.video-intro-card {
+	padding: 32px;
+	margin: 18px 0 28px;
+}
+
+.video-intro-content p {
+	margin: 0 0 18px;
+	font-size: 1.05rem;
+	line-height: 1.55;
+	color: #4b5563;
+}
+
+.video-intro-content p:first-child {
+	font-weight: 700;
+}
+
+.video-intro-content a {
+	color: var(--kingtech-blue);
+	font-weight: 700;
+}
+
+.video-intro-content a:hover {
+	color: var(--kingtech-green);
+}
+
+.video-intro-content p:last-child {
+	margin-bottom: 0;
+}
+
+.video-intro-image {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.video-intro-image img {
+	width: 100%;
+	max-width: 520px;
+	height: auto;
+	display: block;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.video-topic-card {
+	padding: 32px;
+	margin: 0 0 28px;
+}
+
+.video-topic-card h2 {
+	margin-bottom: 14px;
+	max-width: none;
+}
+
+.video-topic-card p {
+	margin: 0;
+	font-size: 1.05rem;
+	line-height: 1.55;
+	color: #4b5563;
+}
+
+@media (max-width: 820px) {
+	.video-intro-image img {
+		max-width: 430px;
+	}
+}

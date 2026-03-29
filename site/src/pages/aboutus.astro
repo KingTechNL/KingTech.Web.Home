@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/index.css';
+import '../styles/about.css';
+---
+
+<Layout
+	title="KingTech | About Us"
+	description="Learn more about KingTech."
+>
+	<div class="page-shell">
+		<main>
+			<section class="intro-block about-intro-card">
+				<div>
+					<p class="section-label">About KingTech</p>
+					<h1>Driven by curiosity, built through hands-on technology.</h1>
+				</div>
+				<p class="about-intro-lead">
+					KingTech is a Dutch company founded in 2012 by Gijs van der Meijde. Since then,
+					KingTech has explored a wide range of technical fields, always aiming to stay at the
+					cutting edge. From 3D printing and industrial electronics to software and custom PCs,
+					KingTech has worked across it all.
+				</p>
+			</section>
+
+			<section class="intro-block about-story-card">
+				<div>
+					<p>
+						Like many tech enthusiasts, founder Gijs van der Meijde was often asked to configure,
+						build, and repair computers for friends and family. It did not take long before he
+						started taking paid jobs in his local area. Although this work was not yet under the
+						KingTech name, this is where our roots began.
+					</p>
+					<p>
+						Driven by a passion for the latest gadgets, Gijs was constantly experimenting with new
+						technologies such as drones, 3D printers, and home automation. It came as no surprise
+						that he chose to study embedded software design and computer science.
+					</p>
+					<p>
+						With a background in embedded systems and computer science, Gijs van der Meijde began
+						taking on development projects for a wide range of companies. That is how the KingTech
+						label officially started.
+					</p>
+				</div>
+				<div class="about-story-image">
+					<img src="/gijs-bit.jpg" alt="Gijs van der Meijde" />
+				</div>
+			</section>
+
+			<section class="about-office-card">
+				<p>
+					Moving into a new office in 2020 opened up even more possibilities. The new KingTech office
+					and server infrastructure allow us to develop software more efficiently, while our workshop,
+					featuring professional soldering equipment, 3D printers, and more, helps us take on larger
+					and more complex projects than ever before.
+				</p>
+
+				<div class="about-office-grid">
+					<figure>
+						<img src="/office/office-solderingtable.jpg" alt="Electronics corner with soldering setup" />
+						<figcaption>Our fine electronics corner featuring professional soldering equipment</figcaption>
+					</figure>
+					<figure>
+						<img src="/office/office-workshop.jpg" alt="KingTech workshop space" />
+						<figcaption>Our workshop</figcaption>
+					</figure>
+					<figure>
+						<img src="/office/office-office.jpg" alt="KingTech ergonomic workspace" />
+						<figcaption>Our ergonomic workspace</figcaption>
+					</figure>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>

@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/index.css';
+import '../styles/blogs.css';
+
+const ggvCards = [
+	{
+		title: 'Gijs Grote Tuinverbouwing',
+		image: '/blogs/ggtv-banner.png',
+		description:
+			'In Gijs Grote Tuinverbouwing, we take you into the wonderful world of gardening. Presenter Gijs van der Meijde shows how he transformed his garden from a plain schoolyard into a true oasis of tranquility.',
+		nlHref: 'https://ggv.kingtech.nl/GijsGroteTuinverbouwing/',
+		enHref: 'https://ggv.kingtech.nl/en/GijsGroteTuinverbouwing/'
+	},
+	{
+		title: 'Gijs Grote Garageverbouwing',
+		image: '/blogs/gggv-banner.png',
+		description:
+			'After the success of Tuinverbouwing, Gijs takes you on a new DIY adventure. In Gijs Grote Garageverbouwing, he swaps nature for a true man cave and shares practical build steps along the way.',
+		nlHref: 'https://ggv.kingtech.nl/GijsGroteGarageverbouwing/',
+		enHref: 'https://ggv.kingtech.nl/en/GijsGroteGarageverbouwing/'
+	},
+	{
+		title: 'Gijs Grote Vleesverbouwing',
+		image: '/blogs/ggvv-banner.png',
+		description:
+			'After another home run with Garageverbouwing, it is time for a culinary adventure. In Gijs Grote Vleesverbouwing, presenter Gijs van der Meijde shows you how to get the most out of your barbecue.',
+		nlHref: 'https://ggv.kingtech.nl/GijsGroteGarageverbouwing/',
+		enHref: 'https://ggv.kingtech.nl/en/GijsGroteGarageverbouwing/'
+	}
+];
+---
+
+<Layout
+	title="KingTech | Blogs"
+	description="KingTech blog posts about hardware, software, and maker projects."
+>
+	<div class="page-shell">
+		<main>
+			<section class="ggv-intro intro-block intro-accent-card">
+				<div>
+					<h1>Gijs Grote Verbouwing</h1>
+					<p>
+						In the Gijs Grote Verbouwing blog series, KingTech founder Gijs shares his latest personal
+						projects with a healthy dose of satire. It started as a joke: whenever people asked how his
+						garden was coming along, he sent them a link to
+						<a href="https://ggv.kingtech.nl/" target="_blank" rel="noopener noreferrer">Gijs Grote Tuinverbouwing</a>
+						(Gijs Great Garden Makeover). Later, he did the same for his garage, now the new KingTech
+						office. Because the blogs became so popular, Gijs continues to maintain and expand them
+						whenever there is a new update.
+					</p>
+				</div>
+			</section>
+
+			<section class="ggv-grid">
+				{ggvCards.map((card) => (
+					<article class="ggv-card media-card">
+						<img src={card.image} alt={card.title} />
+						<div class="media-card-body ggv-card-body">
+							<p>{card.description}</p>
+							<p class="ggv-languages">
+								<a href={card.nlHref} target="_blank" rel="noopener noreferrer">NL</a>
+								<span>|</span>
+								{card.enHref ? (
+									<a href={card.enHref} target="_blank" rel="noopener noreferrer">EN</a>
+								) : (
+									<span>EN (coming soon)</span>
+								)}
+							</p>
+						</div>
+					</article>
+				))}
+			</section>
+		</main>
+
+	</div>
+</Layout>

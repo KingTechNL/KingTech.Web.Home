@@ -1,0 +1,72 @@
+.ggv-intro {
+	padding: 24px 32px;
+	margin-bottom: 20px;
+}
+
+.ggv-intro h1 {
+	font-size: clamp(2rem, 4vw, 3.2rem);
+	line-height: 1.05;
+	max-width: none;
+	margin-bottom: 18px;
+}
+
+.ggv-intro p {
+	font-size: 1.05rem;
+	line-height: 1.55;
+	margin: 0;
+}
+
+.ggv-intro p a {
+	color: var(--kingtech-blue);
+}
+
+.ggv-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+	margin-bottom: 24px;
+}
+
+.ggv-card img {
+	height: 240px;
+	object-fit: contain;
+	background: #f2f3f5;
+}
+
+.ggv-card-body {
+	align-items: flex-start;
+	padding: 20px;
+}
+
+.ggv-card-body p {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.ggv-languages {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 8px;
+	font-weight: 600;
+	margin-top: auto;
+	margin-bottom: 0;
+}
+
+.ggv-languages a {
+	color: var(--kingtech-green);
+	font-weight: 600;
+}
+
+.ggv-languages a:hover {
+	color: var(--kingtech-blue);
+}
+
+.ggv-languages span {
+	color: #1a1f2e;
+}
+
+@media (max-width: 1080px) {
+	.ggv-grid {
+		grid-template-columns: 1fr;
+	}
+}

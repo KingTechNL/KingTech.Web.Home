@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import YouTubePlaylistGrid from '../components/YouTubePlaylistGrid.astro';
+import '../styles/index.css';
+import '../styles/videos.css';
+---
+
+<Layout
+	title="KingTech | Videos"
+	description="Watch videos from KingTech."
+>
+	<div class="page-shell">
+		<main>
+			<section class="intro-block video-intro-card intro-accent-card">
+				<div class="video-intro-content">
+					<p>
+						At KingTech, we want to inspire people to experiment and discover new technology for
+						themselves. That is why we film our most interesting projects. On our
+						<a href="https://www.youtube.com/@kingtech7146">YouTube channel</a>, you will find our
+						latest builds, experiments, and tech reviews.
+					</p>
+
+					<p>
+						<b>Crafty Creations:</b><br>
+						From Arduino-powered LED displays to Raspberry Pi home automation, we'll explore projects
+						that blend code, circuits, and imagination. Whether you're a seasoned maker or a curious
+						newbie, there's a project here with your name on it.
+					</p>
+
+					<p>
+						<b>Build Guides Galore:</b><br>
+						From budget-friendly gaming PCs to high-end workstations, we walk through every step of
+						the assembly process.
+					</p>
+
+					<p>
+						<b>Server Shenanigans:</b><br>
+						Servers are not just for data centers. They are perfect for home labs too. We explore how
+						to set up a home server for media streaming, file storage, or even hosting your own website.
+					</p>
+				</div>
+
+				<div class="video-intro-image">
+					<img src="/videocreation.png" alt="KingTech video creation projects" />
+				</div>
+			</section>
+
+			<section class="intro-block video-topic-card">
+				<div>
+					<h2>PC builds</h2>
+					<p>
+						On the KingTech YouTube channel, you will find multiple PC and server builds. Building
+						technology has always been at the core of KingTech, and computers are no exception. In our
+						PC build videos, we show how we build the systems in our office and our server setup. From
+						time to time, people ask us to build a custom PC. Whenever we take on one of those projects,
+						we try to film it and add it to the PC build playlist.
+					</p>
+
+					<YouTubePlaylistGrid
+						playlistId="PLCTxFN9iaBYUgMO5MhWv8i0ZprEYSDBBK"
+						limit={3}
+						fallbackText="Latest playlist videos are temporarily unavailable."
+					/>
+				</div>
+			</section>
+
+			<section class="intro-block video-topic-card">
+				<div>
+					<h2>Reviews</h2>
+					<p>
+						KingTech exists to create and explore new technology, and we are genuine gadget enthusiasts.
+						That is why we also build and review electronics on our YouTube channel. If this is your
+						kind of content, subscribe to stay up to date and not miss any new videos.
+					</p>
+
+					<YouTubePlaylistGrid
+						playlistId="PLCTxFN9iaBYVAvyhnvoMlzZgcKVZwfZKf"
+						limit={3}
+						fallbackText="Latest playlist videos are temporarily unavailable."
+					/>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>

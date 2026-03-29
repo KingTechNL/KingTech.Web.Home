@@ -40,6 +40,10 @@ jobs:
       working-directory: site
       run: npm run build
 
+    ### Prevent Jekyll from removing _astro assets
+    - name: Add .nojekyll
+      run: touch site/dist/.nojekyll
+
     
     ### Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
@@ -51,5 +55,6 @@ jobs:
         userName: 'github-actions'
         userEmail: 'github-actions@users.noreply.github.com'
         token: ${{ secrets.DEPLOYMENT_TOKEN }}
-        #url: 'www.kingtech.nl'
+        url: 'kingtech.nl'
     
+        
