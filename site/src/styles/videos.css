@@ -14,6 +14,15 @@
 	font-weight: 700;
 }
 
+.video-intro-content a {
+	color: var(--kingtech-blue);
+	font-weight: 700;
+}
+
+.video-intro-content a:hover {
+	color: var(--kingtech-green);
+}
+
 .video-intro-content p:last-child {
 	margin-bottom: 0;
 }
