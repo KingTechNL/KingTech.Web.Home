@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="perfect_hex_pattern" width="104" height="180" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)">
+      
+      <rect width="104" height="180" fill="#ffffff" />
+
+      <symbol id="hex_unit" viewBox="0 0 100 115.5">
+        <path d="M50 0 L100 28.8 L100 86.6 L50 115.5 L0 86.6 L0 28.8 Z" fill="#99cc00" />
+        
+        <path transform="translate(9, 10.4) scale(0.82)" 
+              d="M50 0 L100 28.8 L100 86.6 L50 115.5 L0 86.6 L0 28.8 Z" 
+              fill="none" 
+              stroke="#66ace3" 
+              stroke-width="9" />
+      </symbol>
+
+      <use href="#hex_unit" x="2" y="-57.7" width="100" height="115.5" />
+      <use href="#hex_unit" x="-50" y="32.3" width="100" height="115.5" />
+      <use href="#hex_unit" x="54" y="32.3" width="100" height="115.5" />
+      <use href="#hex_unit" x="2" y="122.3" width="100" height="115.5" />
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#perfect_hex_pattern)" />
+</svg>
