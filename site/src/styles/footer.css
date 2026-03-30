@@ -2,6 +2,7 @@
 	background: #ffffff;
 	box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06), inset 0 5px 0 var(--kingtech-green);
 	padding: 15px 34px;
+	margin-top: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
